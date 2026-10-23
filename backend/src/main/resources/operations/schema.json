@@ -1,0 +1,84 @@
+{
+  "slug": "subcontract",
+  "title": "委外投入产出与未核销物料",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "issued",
+      "label": "累计发料",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "returned",
+      "label": "退料",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "consumed",
+      "label": "核定耗用",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "output",
+      "label": "等效产出",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "yieldPct",
+      "label": "约定产出比例%",
+      "type": "NUMBER",
+      "scale": 4,
+      "min": "0",
+      "max": "100"
+    }
+  ],
+  "columns": [
+    {
+      "key": "unaccounted",
+      "label": "未核销物料"
+    },
+    {
+      "key": "expectedOutput",
+      "label": "预期等效产出"
+    },
+    {
+      "key": "outputShortfall",
+      "label": "产出缺口"
+    }
+  ],
+  "description": "按等效同单位物料检查发料、退料和耗用，核算预期产出及未核销余额，不自动过账。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-23",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "issued": "1000",
+        "returned": "100",
+        "consumed": "900",
+        "output": "855",
+        "yieldPct": "95"
+      }
+    ]
+  }
+}

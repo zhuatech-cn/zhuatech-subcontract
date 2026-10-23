@@ -1,0 +1,48 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "unaccounted": "#0",
+      "expectedOutput": "#855",
+      "outputShortfall": "#0"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "output": "800"
+    },
+    "expected": {
+      "decision": "REVIEW",
+      "outputShortfall": "#55"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "consumed": "950"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "output": "901"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "returned": "50"
+    },
+    "expected": {
+      "decision": "REVIEW",
+      "unaccounted": "#50"
+    },
+    "error": false
+  }
+]
